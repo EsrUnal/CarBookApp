@@ -37,29 +37,29 @@ namespace CarBookApp.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAbout(int id)
         {
-            var values = await _getAboutByIdQueryHandler.Handle(new GetAboutByIdQuery(id));
-            return Ok(values);
+            var value = await _getAboutByIdQueryHandler.Handle(new GetAboutByIdQuery(id));
+            return Ok(value);
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateAbout(CreateAboutCommand command)
         {
             await _creteCommandHandler.Handle(command);
-            return Ok("Added the About Informations");
+            return Ok("Added The About Informations");
         }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveAbout(int id)
         {
             await _removeAboutByIdQueryHandler.Handle(new RemoveAboutCommand(id));
-            return Ok("Deleted the About Informations");
+            return Ok("Removed The About Informations");
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateAbout(UpdateAboutCommand command)
         {
             await _updateAboutByIdQueryHandler.Handle(command);
-            return Ok("Updated the About Information");
+            return Ok("Updated The About Information");
         }
     }
 }
