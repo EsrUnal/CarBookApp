@@ -28,8 +28,7 @@ namespace CarBookApp.Application.Features.CQRS.Handlers.BannerHandlers
                 Description = x.Description,
                 VideoDescription = x.VideoDescription,
                 VideoUrl = x.VideoUrl,
-            }).ToList();
-            
+            }).ToList();            
                 
         }
     }
