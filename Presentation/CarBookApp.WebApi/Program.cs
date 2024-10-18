@@ -20,7 +20,7 @@ builder.Services.AddScoped<GetBannerQueryHandler>();
 builder.Services.AddScoped<GetBannerByIdQueryHandler>();
 builder.Services.AddScoped<CreateBannerCommandHandler>();
 builder.Services.AddScoped<RemoveBannerCommandHandler>();
-builder.Services.AddScoped<UpdateBannerCommandHandle>();
+builder.Services.AddScoped<UpdateBannerCommandHandler>();
 
 builder.Services.AddScoped<GetBrandQueryHandler>();
 builder.Services.AddScoped<GetBrandByIdQueryHandler>();

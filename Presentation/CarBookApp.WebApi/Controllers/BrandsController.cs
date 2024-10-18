@@ -28,7 +28,7 @@ namespace CarBookApp.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> BrandList()
         {
-            var values = _getBrandQueryHandler.Handle();
+            var values = await _getBrandQueryHandler.Handle();
             return Ok(values);
         }
 
