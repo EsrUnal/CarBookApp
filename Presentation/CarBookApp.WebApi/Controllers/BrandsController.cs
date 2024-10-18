@@ -54,9 +54,9 @@ namespace CarBookApp.WebApi.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveBrand(RemoveBrandCommand command)
+        public async Task<IActionResult> RemoveBrand(int id)
         {
-            await _removeBrandCommandHandler.Handle(command);
+            await _removeBrandCommandHandler.Handle(new RemoveBrandCommand(id));
             return Ok("Removed The Brand Informtion");
         }
     }
