@@ -60,14 +60,14 @@ namespace CarBookApp.WebApi.Controllers
         public async Task<IActionResult> UpdateCar(UpdateCarCommand command)
         {
             await _updateCarCommandHandler.Handle(command);
-            return Ok("Updated The About Information");
+            return Ok("Updated The Car Information");
         }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveCar(int id)
         {
             await _removeCarCommandHandler.Handle(new RemoveCarCommand(id));
-            return Ok("Removed The About Informations");
+            return Ok("Removed The Car Informations");
         }
     }
 }

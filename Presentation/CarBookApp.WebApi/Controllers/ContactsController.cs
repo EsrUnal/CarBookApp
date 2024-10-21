@@ -43,21 +43,21 @@ namespace CarBookApp.WebApi.Controllers
         public async Task<IActionResult> CreateCategory(CreateContactCommand command)
         {
             await _createContactCommandHandler.Handle(command);
-            return Ok("Added The Category Informations");
+            return Ok("Added The Contact Informations");
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateCategory(UpdateContactCommand command)
         {
             await _updateContactCommandHandler.Handle(command);
-            return Ok("Updated The About Information");
+            return Ok("Updated The Contact Information");
         }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveCategory(int id)
         {
             await _removeContactCommandHandler.Handle(new RemoveContactCommand(id));
-            return Ok("Removed The About Informations");
+            return Ok("Removed The Contact Informations");
         }
     }
 }

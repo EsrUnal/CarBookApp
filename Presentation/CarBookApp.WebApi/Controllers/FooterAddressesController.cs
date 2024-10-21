@@ -36,21 +36,21 @@ namespace CarBookApp.WebApi.Controllers
         public async Task<IActionResult> CreateFooterAddress(CreateFooterAddressCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Added The Category Informations");
+            return Ok("Added The Footer Address Informations");
         }
 
         [HttpPut]
         public async Task<IActionResult> UpdateFooterAddress(UpdateFooterAddressCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Updated The About Information");
+            return Ok("Updated The Footer Address Information");
         }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveFooterAddress(int id)
         {
             await _mediator.Send(new RemoveFooterAddressCommand(id));
-            return Ok("Removed The About Informations");
+            return Ok("Removed The Footer Address Informations");
         }
     }
 }

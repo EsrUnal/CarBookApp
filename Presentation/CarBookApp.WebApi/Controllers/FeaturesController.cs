@@ -37,21 +37,21 @@ namespace CarBookApp.WebApi.Controllers
         public async Task<IActionResult> CreateFeature(CreateFeatureCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Added The Category Informations");
+            return Ok("Added The Feature Informations");
         }
 
         [HttpPut]
         public async Task<IActionResult>  UpdateFeature(UpdateFeatureCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Updated The About Information");
+            return Ok("Updated The Feature Information");
         }
 
         [HttpDelete]
         public async Task<IActionResult> RemoveFeature(int id)
         {
             await _mediator.Send(new RemoveFeatureCommand(id));
-            return Ok("Removed The About Informations");
+            return Ok("Removed The Feature Informations");
         }
     }
 }
