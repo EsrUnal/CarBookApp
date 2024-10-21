@@ -54,9 +54,9 @@ namespace CarBookApp.WebApi.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> RemoveCategory(RemoveContactCommand command)
+        public async Task<IActionResult> RemoveCategory(int id)
         {
-            await _removeContactCommandHandler.Handle(command);
+            await _removeContactCommandHandler.Handle(new RemoveContactCommand(id));
             return Ok("Removed The About Informations");
         }
     }
