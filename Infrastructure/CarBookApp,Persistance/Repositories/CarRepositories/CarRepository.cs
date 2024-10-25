@@ -2,11 +2,6 @@
 using CarBookApp.Domain.Entities;
 using CarBookApp_Persistance.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarBookApp_Persistance.Repositories.CarRepositories
 {

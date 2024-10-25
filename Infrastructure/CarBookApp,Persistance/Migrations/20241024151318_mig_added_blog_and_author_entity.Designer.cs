@@ -4,6 +4,7 @@ using CarBookApp_Persistance.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarBookApp_Persistance.Migrations
 {
     [DbContext(typeof(CarBookAppContext))]
-    partial class CarBookAppContextModelSnapshot : ModelSnapshot
+    [Migration("20241024151318_mig_added_blog_and_author_entity")]
+    partial class mig_added_blog_and_author_entity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
