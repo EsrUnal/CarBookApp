@@ -30,6 +30,13 @@ namespace CarBookApp.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("GetBlogsWithAuthors")]
+        public async Task<IActionResult> BlogsWithAuthorsList()
+        {
+            var values = await _mediator.Send(new GetBlogsWithAuthorsQuery());
+            return Ok(values);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBlog(int id)
         {
