@@ -9,7 +9,6 @@
 <body>
     @await Component.InvokeAsync("_NavbarUILayoutComponentPartial")
     @await Component.InvokeAsync("_DefaultCoverUILayoutComponentPartial")
-
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
             <div class="row no-gutters">
@@ -74,15 +73,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p><a href="#" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
+                                <p><a href="/CarPricingsWithCars/Index/" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
-
-
     @await Component.InvokeAsync("_Last5CarsWithBrandComponentPartial")
     @await Component.InvokeAsync("_AboutUsComponentPartial")
     @await Component.InvokeAsync("_ServicesComponentPartial")
