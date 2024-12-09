@@ -11,6 +11,7 @@ using CarBookApp_Persistance.Repositories;
 using CarBookApp_Persistance.Repositories.BlogRepositories;
 using CarBookApp_Persistance.Repositories.CarPricingRepositories;
 using CarBookApp_Persistance.Repositories.CarRepositories;
+using CarBookApp_Persistance.Repositories.TagCloudRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(ICarRepository), typeof(CarRepository));
 builder.Services.AddScoped(typeof(IBlogRepository), typeof(BlogRepository));
 builder.Services.AddScoped(typeof(ICarPricingRepository), typeof(CarPricingRepository));
+builder.Services.AddScoped(typeof(ITagCloudRepository), typeof(TagCloudRepository));
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();
